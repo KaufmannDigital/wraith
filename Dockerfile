@@ -19,5 +19,3 @@ RUN apt-get install -y ttf-freefont ttf-mscorefonts-installer ttf-bitstream-vera
 
 # Make sure a recent (>6.7.7-10) version of ImageMagick is installed.
 RUN apt-get install -y imagemagick
-
-ENTRYPOINT [ "wraith" ]
