@@ -3,6 +3,8 @@ FROM ruby:2.1.2
 # some of ruby's build scripts are written in ruby
 # we purge this later to make sure our final image uses what we just built
 RUN apt-get update
+RUN apt-get upgrade -y
+RUN apt-get autoremove -y
 RUN echo "export phantomjs=/usr/bin/phantomjs" > .bashrc
 RUN apt-get install -y libfreetype6 libfontconfig1 nodejs npm libnss3-dev libgconf-2-4
 RUN ln -s /usr/bin/nodejs /usr/bin/node
